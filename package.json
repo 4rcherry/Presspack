@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "nodemon server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,7 @@
     "chart.js": "^2.9.3",
     "express": "^4.17.1",
     "ng2-charts": "^2.3.0",
+    "nodemon": "^2.0.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -52,7 +53,7 @@
     "typescript": "~3.7.5"
   },
   "engines": {
-  "node": "10.15.3",
-  "npm": "6.14.2"
+    "node": "10.15.3",
+    "npm": "6.14.2"
   }
 }
