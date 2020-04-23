@@ -1,0 +1,36 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="mat-title">Add Supplier</div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Supplier Name</mat-label>
+      <input [(ngModel)]="name" name="name" matInput>
+      <mat-icon matSuffix>home_work</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Main Product</mat-label>
+      <input [(ngModel)]="product" name="product" matInput>
+      <mat-icon matSuffix>archive</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input [(ngModel)]="address" name="address" matInput>
+      <mat-icon matSuffix>location_on</mat-icon>
+    </mat-form-field>
+
+  <button mat-button type="submit" class="bg-4" [disabled]="!form.valid">Submit</button>
+</form>
+
+<ng-template #successDialog>
+  <h2 matDialogTitle>Konten Berhasil Diunggah!</h2>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose class="btn btn-primary btn-outline">OK</button>
+  </mat-dialog-actions>
+</ng-template>
+<ng-template #failedDialog>
+  <h2 matDialogTitle>Konten Gagal Diunggah!</h2>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose class="btn btn-danger btn-outline">OK</button>
+  </mat-dialog-actions>
+</ng-template>

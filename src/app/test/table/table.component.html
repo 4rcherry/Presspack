@@ -1,0 +1,27 @@
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput placeholder="Ex. Mia">
+</mat-form-field>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+
+    <ng-container  matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Supplier Compnay</mat-header-cell>
+      <mat-cell *matCellDef="let supplier">{{ supplier.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container  matColumnDef="product">
+      <mat-header-cell *matHeaderCellDef>Product</mat-header-cell>
+      <mat-cell *matCellDef="let supplier">{{ supplier.product }}</mat-cell>
+    </ng-container>
+
+    <ng-container  matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let supplier">{{ supplier.address }}</mat-cell>
+    </ng-container>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
