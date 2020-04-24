@@ -7,19 +7,27 @@
     <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
 
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef>Warehouse Place</mat-header-cell>
-      <mat-cell *matCellDef="let data">{{ data.name }}</mat-cell>
+    <ng-container matColumnDef="material_id">
+      <mat-header-cell *matHeaderCellDef>Material ID</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.material_id }}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="liquid">
-      <mat-header-cell *matHeaderCellDef>Liquid Capacity</mat-header-cell>
-      <mat-cell *matCellDef="let data">{{ data.liquid | number }}L</mat-cell>
+    <ng-container matColumnDef="storage_id">
+      <mat-header-cell *matHeaderCellDef>Storage ID</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.storage_id }}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="mass">
-      <mat-header-cell *matHeaderCellDef>Mass Capacity</mat-header-cell>
-      <mat-cell *matCellDef="let data">{{ data.mass | number }}Kg</mat-cell>
+    <ng-container matColumnDef="in">
+      <mat-header-cell *matHeaderCellDef>Transaction</mat-header-cell>
+      <mat-cell *matCellDef="let data">
+        <ng-container *ngIf="data.in">In</ng-container>
+        <ng-container *ngIf="!data.in">Out</ng-container>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.quantity | number }}</mat-cell>
     </ng-container>
 
 

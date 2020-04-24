@@ -32,6 +32,9 @@ import { MaterialListComponent } from './components/material-list/material-list.
 import { MaterialStorageComponent } from './pages/material-storage/material-storage.component';
 import { MaterialStorageAddComponent } from './components/material-storage-add/material-storage-add.component';
 import { MaterialStorageListComponent } from './components/material-storage-list/material-storage-list.component';
+import { MaterialInventoryComponent } from './pages/material-inventory/material-inventory.component';
+import { MaterialInventoryAddComponent } from './components/material-inventory-add/material-inventory-add.component';
+import { MaterialInventoryListComponent } from './components/material-inventory-list/material-inventory-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +50,10 @@ import { MaterialStorageListComponent } from './components/material-storage-list
     MaterialListComponent,
     MaterialStorageComponent,
     MaterialStorageAddComponent,
-    MaterialStorageListComponent
+    MaterialStorageListComponent,
+    MaterialInventoryComponent,
+    MaterialInventoryAddComponent,
+    MaterialInventoryListComponent
   ],
   imports: [
     AppRoutingModule,

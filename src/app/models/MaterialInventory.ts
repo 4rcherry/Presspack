@@ -1,7 +1,8 @@
 export class MaterialInventory {
   _id:String;
   material_id:String;
-  location:String;
-  in:String;
+  storage_id:String;
+  quantity:Number;
+  in:Boolean;
   out:String;
 }
