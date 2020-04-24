@@ -8,14 +8,14 @@
       <ng-container *ngFor="let data of suppliers">
         <option value="{{ data._id }}">{{ data.name }}</option>
       </ng-container>
-
     </select>
+    <mat-icon matSuffix>home_work</mat-icon>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Product Name</mat-label>
     <input [(ngModel)]="name" name="name" matInput>
-    <mat-icon matSuffix>archive</mat-icon>
+    <mat-icon matSuffix>redeem</mat-icon>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
@@ -25,13 +25,14 @@
       <option value="1">Liter</option>
       <option value="2">Kilogram</option>
     </select>
+    <mat-icon matSuffix>category</mat-icon>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Price</mat-label>
     <span matPrefix>Rp &nbsp;</span>
     <input [(ngModel)]="price" name="price" type="number" placeholder="0.00" matInput>
-    <mat-icon matSuffix>archive</mat-icon>
+    <mat-icon matSuffix>local_offer</mat-icon>
   </mat-form-field>
 
   <button mat-button type="submit" class="bg-4" [disabled]="!form.valid">Submit</button>
