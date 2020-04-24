@@ -29,6 +29,9 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { MaterialComponent } from './pages/material/material.component';
 import { MaterialAddComponent } from './components/material-add/material-add.component';
 import { MaterialListComponent } from './components/material-list/material-list.component';
+import { MaterialStorageComponent } from './pages/material-storage/material-storage.component';
+import { MaterialStorageAddComponent } from './components/material-storage-add/material-storage-add.component';
+import { MaterialStorageListComponent } from './components/material-storage-list/material-storage-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +44,10 @@ import { MaterialListComponent } from './components/material-list/material-list.
     ConfirmationComponent,
     MaterialComponent,
     MaterialAddComponent,
-    MaterialListComponent
+    MaterialListComponent,
+    MaterialStorageComponent,
+    MaterialStorageAddComponent,
+    MaterialStorageListComponent
   ],
   imports: [
     AppRoutingModule,

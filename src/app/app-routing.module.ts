@@ -4,12 +4,14 @@ import {IndexComponent} from "./pages/index/index.component";
 import {SupplierComponent} from "./pages/supplier/supplier.component";
 import {TableComponent} from "./test/table/table.component";
 import {MaterialComponent} from "./pages/material/material.component";
+import {MaterialStorageComponent} from "./pages/material-storage/material-storage.component";
 
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
   {path: 'supplier', component: SupplierComponent},
   {path: 'material', component: MaterialComponent},
+  {path: 'material/storage', component: MaterialStorageComponent},
 
   {path: 'test/table', component: TableComponent}
 ];

@@ -7,32 +7,19 @@
     <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
 
-    <ng-container  matColumnDef="supplier_id">
-      <mat-header-cell *matHeaderCellDef>Supplier ID</mat-header-cell>
-      <mat-cell *matCellDef="let data">{{ data.supplier_id }}</mat-cell>
-    </ng-container>
-
-    <ng-container  matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef>Product Name</mat-header-cell>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Warehouse Place</mat-header-cell>
       <mat-cell *matCellDef="let data">{{ data.name }}</mat-cell>
     </ng-container>
 
-    <ng-container  matColumnDef="unit">
-      <mat-header-cell *matHeaderCellDef>Unit</mat-header-cell>
-      <mat-cell *matCellDef="let data">
-        <ng-container *ngIf="data.unit == 1">
-          Liter
-        </ng-container>
-        <ng-container *ngIf="data.unit == 2">
-          Kilogram
-        </ng-container>
-
-      </mat-cell>
+    <ng-container matColumnDef="liquid">
+      <mat-header-cell *matHeaderCellDef>Liquid Capacity</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.liquid | number }}L</mat-cell>
     </ng-container>
 
-    <ng-container  matColumnDef="price">
-      <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
-      <mat-cell *matCellDef="let data">Rp {{ data.price | number }}</mat-cell>
+    <ng-container matColumnDef="mass">
+      <mat-header-cell *matHeaderCellDef>Mass Capacity</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.mass | number }}L</mat-cell>
     </ng-container>
 
 

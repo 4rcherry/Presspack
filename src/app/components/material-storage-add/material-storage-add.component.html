@@ -1,0 +1,28 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="mat-title">Add Material Storage (Warehouse)</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Warehouse Name</mat-label>
+    <input [(ngModel)]="name" name="name" matInput>
+    <mat-icon matSuffix>archive</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Liquid Storage Capacity</mat-label>
+    <input [(ngModel)]="liquid" name="liquid" type="number" matInput>
+    <span matPrefix>L &nbsp;</span>
+    <mat-icon matSuffix>archive</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Mass Storage Capacity</mat-label>
+    <span matPrefix>Kg &nbsp;</span>
+    <input [(ngModel)]="mass" name="mass" type="number" matInput>
+    <mat-icon matSuffix>archive</mat-icon>
+  </mat-form-field>
+
+
+  <button mat-button type="submit" class="bg-4" [disabled]="!form.valid">Submit</button>
+  <!--  <button mat-button type="submit" (click)="onConfirm()" class="bg-4" [disabled]="!form.valid">Submit</button>-->
+</form>
+

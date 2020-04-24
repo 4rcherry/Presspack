@@ -7,6 +7,8 @@ export const environment = {
   endpoint: `https://presspack-service.herokuapp.com/`,
   epSupplier: `https://presspack-service.herokuapp.com/supplier/`,
   epMaterial: `https://presspack-service.herokuapp.com/material/`,
+  epMaterialStorage: `https://presspack-service.herokuapp.com/material-storage/`,
+  epMaterialInventory: `https://presspack-service.herokuapp.com/material-inventory/`,
 };
 
 /*

@@ -26,7 +26,6 @@ export class MaterialAddComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("clicked");
     const data = {
       supplier_id:  this.supplier_id,
       name:         this.name,
