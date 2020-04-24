@@ -26,12 +26,8 @@ export class SupplierService {
     return this.http.get<Supplier[]>(url + id)
   }
 
-  postData(name, product, address) {
-    const data:FormData = new FormData();
-    data.append('name', name);
-    data.append('product', product);
-    data.append('address', address);
-    return this.http.post(url, data)
+  postData(data:Supplier):Observable<Supplier> {
+    return this.http.post<Supplier>(url, data, httpOptions)
   }
 
   patchData(data:Supplier):Observable<Supplier> {

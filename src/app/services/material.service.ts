@@ -26,13 +26,8 @@ export class MaterialService {
     return this.http.get<Material[]>(url + id)
   }
 
-  postData(supplier_id, name, unit, price) {
-    const data:FormData = new FormData();
-    data.append('supplier_id', supplier_id);
-    data.append('name', name);
-    data.append('unit', unit);
-    data.append('price', price);
-    return this.http.post(url, data)
+  postData(data:Material):Observable<Material> {
+    return this.http.post<Material>(url, data, httpOptions)
   }
 
   patchData(data:Material):Observable<Material> {

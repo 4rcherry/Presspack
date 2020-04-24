@@ -1,2 +1,15 @@
-<app-supplier-add></app-supplier-add>
+<app-supplier-add (addData)="addData($event)"></app-supplier-add>
 <app-supplier-list></app-supplier-list>
+
+<ng-template #successDialog>
+  <h2 matDialogTitle>Data Berhasil Diunggah!</h2>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose class="btn btn-primary btn-outline">OK</button>
+  </mat-dialog-actions>
+</ng-template>
+<ng-template #failedDialog>
+  <h2 matDialogTitle>Data Gagal Diunggah!</h2>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose class="btn btn-danger btn-outline">OK</button>
+  </mat-dialog-actions>
+</ng-template>

@@ -27,6 +27,8 @@ import { SupplierAddComponent } from './components/supplier-add/supplier-add.com
 import { ConfirmationComponent } from './parts/confirmation/confirmation.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { MaterialComponent } from './pages/material/material.component';
+import { MaterialAddComponent } from './components/material-add/material-add.component';
+import { MaterialListComponent } from './components/material-list/material-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { MaterialComponent } from './pages/material/material.component';
     TableComponent,
     SupplierAddComponent,
     ConfirmationComponent,
-    MaterialComponent
+    MaterialComponent,
+    MaterialAddComponent,
+    MaterialListComponent
   ],
   imports: [
     AppRoutingModule,

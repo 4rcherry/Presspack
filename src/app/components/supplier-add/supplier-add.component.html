@@ -18,19 +18,7 @@
       <input [(ngModel)]="address" name="address" matInput>
       <mat-icon matSuffix>location_on</mat-icon>
     </mat-form-field>
-
   <button mat-button type="submit" class="bg-4" [disabled]="!form.valid">Submit</button>
+<!--  <button mat-button type="submit" (click)="onConfirm()" class="bg-4" [disabled]="!form.valid">Submit</button>-->
 </form>
 
-<ng-template #successDialog>
-  <h2 matDialogTitle>Konten Berhasil Diunggah!</h2>
-  <mat-dialog-actions align="end">
-    <button mat-button matDialogClose class="btn btn-primary btn-outline">OK</button>
-  </mat-dialog-actions>
-</ng-template>
-<ng-template #failedDialog>
-  <h2 matDialogTitle>Konten Gagal Diunggah!</h2>
-  <mat-dialog-actions align="end">
-    <button mat-button matDialogClose class="btn btn-danger btn-outline">OK</button>
-  </mat-dialog-actions>
-</ng-template>

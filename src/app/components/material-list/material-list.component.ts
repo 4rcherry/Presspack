@@ -1,26 +1,25 @@
-import {Component, Input, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {Supplier} from "../../models/Supplier";
-import {SupplierService} from "../../services/supplier.service";
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {MatDialog} from "@angular/material/dialog";
-import {ConfirmationComponent} from "../../parts/confirmation/confirmation.component";
+import {Material} from "../../models/Material";
+import {MaterialService} from "../../services/material.service";
 
 @Component({
-  selector: 'app-supplier-list',
-  templateUrl: './supplier-list.component.html',
-  styleUrls: ['./supplier-list.component.css']
+  selector: 'app-material-list',
+  templateUrl: './material-list.component.html',
+  styleUrls: ['./material-list.component.css']
 })
-export class SupplierListComponent implements OnInit {
+export class MaterialListComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild('successDialogDelete') successDialogDelete: TemplateRef<any>;
   @ViewChild('failedDialogDelete') failedDialogDelete: TemplateRef<any>;
 
-  suppliers:Supplier[];
-  dataSource  = [];
-  tableColumns:string[] = ['name', 'product', 'address', '_id'];
-  constructor(private service:SupplierService, public dialog: MatDialog) { }
+  materials:Material[];
+  dataSource=[];
+  tableColumns:string[] = ['supplier_id', 'name', 'unit', 'price', '_id'];
+  constructor(private service:MaterialService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.service.getAll().subscribe((result) => {
@@ -38,7 +37,7 @@ export class SupplierListComponent implements OnInit {
     }
   }
 
-  deleteData(data:Supplier) {
+  deleteData(data:Material) {
     try {
       this.service.deleteData(data).subscribe(result => {
         window.location.reload();
@@ -48,4 +47,3 @@ export class SupplierListComponent implements OnInit {
     }
   }
 }
-

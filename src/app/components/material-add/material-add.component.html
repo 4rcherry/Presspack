@@ -1,0 +1,40 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="mat-title">Add Raw Material</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Supplier Name</mat-label>
+    <select matNativeControl [(ngModel)]="supplier_id" name="supplier_id" matInput>
+      <option value=""> - Select -</option>
+      <ng-container *ngFor="let data of suppliers">
+        <option value="{{ data._id }}">{{ data.name }}</option>
+      </ng-container>
+
+    </select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Product Name</mat-label>
+    <input [(ngModel)]="name" name="name" matInput>
+    <mat-icon matSuffix>archive</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Unit</mat-label>
+    <select matNativeControl [(ngModel)]="unit" name="unit" matInput>
+      <option value=""> - Select -</option>
+      <option value="1">Liter</option>
+      <option value="2">Kilogram</option>
+    </select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <span matPrefix>Rp &nbsp;</span>
+    <input [(ngModel)]="price" name="price" type="number" placeholder="0.00" matInput>
+    <mat-icon matSuffix>archive</mat-icon>
+  </mat-form-field>
+
+  <button mat-button type="submit" class="bg-4" [disabled]="!form.valid">Submit</button>
+  <!--  <button mat-button type="submit" (click)="onConfirm()" class="bg-4" [disabled]="!form.valid">Submit</button>-->
+</form>
+
